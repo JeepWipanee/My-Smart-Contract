@@ -5,9 +5,15 @@ contract Greetings {
     string message;
 
     constructor() public {
-        message = "OK na ka.";
+        message = "OK ka.";
     }
 
-    
+    function setGreeting(string _message) public {
+        message = _message;
+    }
+
+    function setGreeting() public view returns (string) {
+        return message;
+    }
 
 }
